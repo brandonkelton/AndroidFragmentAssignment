@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AndroidFragmentAssignment</string>
+    <string name="skyColor">Preferred Sky Color</string>
+    <string name="planet_destination_preferences">Planet Destination Preferences</string>
+    <string name="planet_size">Planet Size</string>
+    <string name="land_type">Land Type</string>
+    <string name="landtype_continent">Continent</string>
+    <string name="landtype_small_continent">Small Continent</string>
+    <string name="landtype_island">Island</string>
+    <string name="switch_isPopulated">Yes</string>
+    <string name="switch_isUnpopulated">No</string>
+    <string name="switch_population_text">Populated / Unpopulated</string>
+    <string name="viewSettings_landTypes_label">"Land Type: "</string>
+    <string name="menu_ChangeSettings">Change Settings</string>
+    <string name="menu_ViewSettings">View Settings</string>
+    <string name="isPopulated">Is Populated?</string>
+    <string name="view_label_ispopulated">Is Populated?</string>
+    <string name="planetSize_label">Planet Size:</string>
+    <string name="skycolor_label">Sky Color:</string>
+    <string name="button_label_selectColor">Select Color</string>
+    <string name="contentDescription_planetImage">Your Destination</string>
+</resources>

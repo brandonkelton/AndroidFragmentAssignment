@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.main.ChangeSettingsFragment">
+
+<TextView
+    android:id="@+id/textView_skyColor"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="32dp"
+    android:text="@string/skyColor"
+    android:textSize="18sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_PlanetSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/planet_size"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_skyColor" />
+
+<SeekBar
+    android:id="@+id/seekBar_planetSize"
+    style="@style/Widget.AppCompat.SeekBar"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="8dp"
+    android:max="200"
+    android:progress="100"
+    android:progressTint="#000000"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/textView_PlanetSize" />
+
+<TextView
+    android:id="@+id/textView_landtype"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="32dp"
+    android:text="@string/land_type"
+    android:textSize="18sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/seekBar_planetSize" />
+
+<CheckBox
+    android:id="@+id/checkbox_continent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/landtype_continent"
+    tools:context=".ui.main.ChangeSettingsFragment"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textView_landtype" />
+
+<CheckBox
+    android:id="@+id/checkbox_small_continent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:text="@string/landtype_small_continent"
+    tools:context=".ui.main.ChangeSettingsFragment"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/checkbox_continent" />
+
+<CheckBox
+    android:id="@+id/checkbox_island"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="160dp"
+    android:text="@string/landtype_island"
+    tools:context=".ui.main.ChangeSettingsFragment"
+    app:layout_constraintStart_toStartOf="@id/checkbox_small_continent"
+    app:layout_constraintTop_toTopOf="@id/checkbox_continent" />
+
+    <Switch
+        android:id="@+id/switch_population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:showText="false"
+        android:textAlignment="viewStart"
+        android:textOff="@string/switch_isUnpopulated"
+        android:textOn="@string/switch_isPopulated"
+        app:layout_constraintStart_toStartOf="@id/textView_isPopulated_label"
+        app:layout_constraintTop_toTopOf="@id/textView_isPopulated_label"
+        tools:checked="true" />
+
+    <TextView
+        android:id="@+id/textView_isPopulated_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/isPopulated"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/checkbox_continent" />
+
+    <ImageView
+        android:id="@+id/imageView_planet"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginBottom="128dp"
+        android:contentDescription="@string/contentDescription_planetImage"
+        android:src="@drawable/planet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_population" />
+
+    <Button
+        android:id="@+id/button_SelectColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/button_label_selectColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
